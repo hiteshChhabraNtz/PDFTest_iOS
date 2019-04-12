@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ToolView" customModule="PDF_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmQ-u5-6dK">
+                    <rect key="frame" x="94" y="0.0" width="93.5" height="43"/>
+                    <state key="normal" image="thumbnails"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="754" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-Oi-ir8">
+                    <rect key="frame" x="187.5" y="0.0" width="94" height="43"/>
+                    <state key="normal" image="edit-annotations"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M71-g4-A1f">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="43"/>
+                    <state key="normal" title="Previous">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="754" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aaw-bk-a7g">
+                    <rect key="frame" x="281.5" y="0.0" width="93.5" height="43"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8Tk-Oi-ir8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6ff-hO-3Fe"/>
+                <constraint firstAttribute="bottom" secondItem="8Tk-Oi-ir8" secondAttribute="bottom" id="DUb-fO-jn7"/>
+                <constraint firstItem="M71-g4-A1f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FLs-YX-qlG"/>
+                <constraint firstItem="SmQ-u5-6dK" firstAttribute="width" secondItem="M71-g4-A1f" secondAttribute="width" id="Ijh-nw-Ald"/>
+                <constraint firstItem="SmQ-u5-6dK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N8M-sF-vb2"/>
+                <constraint firstItem="M71-g4-A1f" firstAttribute="bottom" secondItem="SmQ-u5-6dK" secondAttribute="bottom" id="WBX-dr-lpb"/>
+                <constraint firstAttribute="bottom" secondItem="SmQ-u5-6dK" secondAttribute="bottom" id="a8m-Cx-nG3"/>
+                <constraint firstItem="8Tk-Oi-ir8" firstAttribute="leading" secondItem="SmQ-u5-6dK" secondAttribute="trailing" id="bpr-Rg-dwG"/>
+                <constraint firstItem="M71-g4-A1f" firstAttribute="top" secondItem="SmQ-u5-6dK" secondAttribute="top" id="c2l-bV-qLm"/>
+                <constraint firstItem="8Tk-Oi-ir8" firstAttribute="width" secondItem="SmQ-u5-6dK" secondAttribute="width" id="cQD-WO-tS3"/>
+                <constraint firstItem="Aaw-bk-a7g" firstAttribute="top" secondItem="8Tk-Oi-ir8" secondAttribute="top" id="dc6-xb-CpV"/>
+                <constraint firstItem="SmQ-u5-6dK" firstAttribute="leading" secondItem="M71-g4-A1f" secondAttribute="trailing" id="g6X-W0-yDI"/>
+                <constraint firstAttribute="trailing" secondItem="Aaw-bk-a7g" secondAttribute="trailing" id="x36-tm-tqc"/>
+                <constraint firstItem="Aaw-bk-a7g" firstAttribute="leading" secondItem="8Tk-Oi-ir8" secondAttribute="trailing" id="xD8-QN-c1X"/>
+                <constraint firstItem="8Tk-Oi-ir8" firstAttribute="width" secondItem="Aaw-bk-a7g" secondAttribute="width" id="yXc-f9-Sp4"/>
+                <constraint firstItem="Aaw-bk-a7g" firstAttribute="bottom" secondItem="8Tk-Oi-ir8" secondAttribute="bottom" id="zyz-Ua-WcM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnNextPage" destination="Aaw-bk-a7g" id="F89-QM-JYH"/>
+                <outlet property="btnPreviousPage" destination="M71-g4-A1f" id="zuS-Gj-dhZ"/>
+                <outlet property="editBtn" destination="8Tk-Oi-ir8" id="4Qe-o5-REd"/>
+                <outlet property="thumbBtn" destination="SmQ-u5-6dK" id="9ey-8d-SnI"/>
+            </connections>
+            <point key="canvasLocation" x="-116" y="-708.39580209895053"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="edit-annotations" width="24" height="24"/>
+        <image name="thumbnails" width="24" height="24"/>
+    </resources>
+</document>
